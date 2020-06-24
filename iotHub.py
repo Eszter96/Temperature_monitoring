@@ -3,7 +3,7 @@ import time
 import ssl
 from paho.mqtt import client as mqtt
 
-CREDENTIALS = json.load(open('creds.json', 'r'))
+CREDENTIALS = json.load(open('credentials_template.json', 'r'))
 
 # Get certificate form here: https://github.com/Azure/azure-iot-sdk-c/blob/master/certs/certs.c - \r\n and "" has to be deleted
 PATH_TO_ROOT_CERT = CREDENTIALS["PATH_TO_ROOT_CERT"]
@@ -86,7 +86,7 @@ if __name__ == '__main__':
    
 
     # Local mqtt client
-    client = mqtt.Client(client_id="Eszter", userdata={"AzureMQTTClient": azure_client})
+    client = mqtt.Client(client_id="<Local CLIENT_ID>", userdata={"AzureMQTTClient": azure_client})
     client.on_connect = on_connect_local 
     client.on_message = on_message_local
     client.connect('127.0.0.1', 1883, 60)

@@ -1,0 +1,1 @@
+https://github.com/Azure/azure-iot-sdk-c/blob/master/certs/certs.c - copy the proper certificate and don't forget to delete the \r\n " characters!
