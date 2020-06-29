@@ -5,6 +5,7 @@ from machine import Pin
 from dht import DHT22
 import network
 import machine
+import json
 
 CREDENTIALS = json.load(open('creds.json', 'r'))
 
