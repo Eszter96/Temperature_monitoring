@@ -13,7 +13,7 @@ The data is forwarded via MQTT client to the IoT Hub. The Paho MQTT needs to be 
 </br></br>
 On the Raspberry Pi two clients are configured. There are a subscriber and a publisher client. The subscriber receives the messages from the microcontrollers and the publisher sends the data to the IoT Hub.
 </br></br>
-### ESP32 with battery (version2 branch)
+### ESP32 with battery
 If the ESP32 is used with battery, the usage of the deep sleep mode is recommended, in order to extend the battery life. The ESP32 reboots after deep sleep mode. Therefore the code has to be on the board as a main file, because the main file is automatically executed after each reboot. If something happens during the process the ESP32 is accessible with webREPL from the browser (after webrepl is configured on the board).
 </br></br>
 ### Timing on ESP32
