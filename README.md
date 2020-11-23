@@ -20,7 +20,7 @@ If the ESP32 is used with battery, the usage of the deep sleep mode is recommend
 You can determine how many readings you want to get on daily basis on the ESP32 and according to that the sleeping time will be calculated. If the main file is used there's no need to use any infinite loop, the board will iterate it automatically.
 </br></br>
 ### Credentials
-It is good practice to use credential files which contains sensitive data for example for security reasons. Moreover it makes the code much cleaner.
+It is good practice to use credentials file which contains sensitive data for example for security reasons. Moreover it makes the code much cleaner.
 The credential file contains everything for both the ESP32 and the Raspberry Pi, which means it is needed on each device. However, it is recommended to keep only those credentials in the file which the actual device needs. 
 
 
