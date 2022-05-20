@@ -1,12 +1,12 @@
 # Temperature_monitoring
 ### Temperature and humidity measuring, recording data in Azure Cloud 
 
- The goal was to create a system which consists several DHT22 sensors, ESP32 microcontrollers and a Raspberry Pi which collects the data from the ESP32 microcontrollers and forwards that to the cloud. 
+ The goal was to create a system which consists of several DHT22 sensors, ESP32 microcontrollers and a Raspberry Pi which collects the data from the ESP32 microcontrollers and forwards that to the cloud. 
 </br></br>
 ### Communication between ESP32 and Raspberry Pi
 Since the ESP32 uses micropython, the MQTT has to be imported from a specific file which is available on the following repository: https://github.com/micropython/micropython-lib/tree/master/umqtt.simple/umqtt. Copy the code from the simple python file and save it on the ESP32 as a separated file (it's recommended to save that file in a folder - named umqtt). 
 
-For MQTT configuration on the ESP32 WIFI credentials (SSID + password) are needed to be defined to be able to connect to the network. The IP address of the MQTT broker is also needed (in this case the IP the Raspberry Pi). The topic and client id are required as well. 
+For MQTT configuration in the ESP32 WIFI credentials (SSID + password) are needed to be defined to be able to connect to the network. The IP address of the MQTT broker is also needed (in this case the IP the Raspberry Pi). The topic and client id are required as well. 
 </br></br>
 ### Communication between Raspberry Pi and IoT Hub
 The data is forwarded via MQTT client to the IoT Hub. The Paho MQTT needs to be imported (and also installed on the machine). 
